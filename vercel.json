@@ -1,6 +1,12 @@
 {
-  "buildCommand": "cd apps/dashboard && npm install && npm run build",
-  "outputDirectory": "apps/dashboard/.next",
-  "framework": "nextjs",
-  "installCommand": "npm install --prefix apps/dashboard"
+  "experimentalServices": {
+    "web": {
+      "entrypoint": "apps/dashboard",
+      "routePrefix": "/"
+    },
+    "api": {
+      "entrypoint": "main.py",
+      "routePrefix": "/api"
+    }
+  }
 }
